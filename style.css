@@ -8,22 +8,23 @@ body {
     padding:0.05rem;
 }
 header {
-    display:inline;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 #title {
     font-family: 'Prata', serif;
     color:white;
     font-size:1.05em;
-    display:inline;
-    padding-right:11.7rem;
-    padding-left:0.5rem;
+    padding-left:0;
 }
 #hamburger-menu {
     display:none;
+    cursor:pointer;
 }
 ul {
-    display:inline-block;
-    text-align:center;
+    display:flex;
+    justify-content:space-between;
 }
 li {
     list-style:none;
@@ -33,11 +34,8 @@ li {
     margin-right:1.8rem;
 }
 .logos-li {
-    margin-right:5.2rem;
-    margin-left:0rem;
-}
-#logos-li-end {
-    margin-right:0;
+    display:flex;
+    justify-content:space-evenly;
 }
 a {
     color:gray;
@@ -53,16 +51,13 @@ a:hover {
     font-family:Georgia, 'Times New Roman',Times, serif;
     height:3rem;
     width:9.3rem;
+    align-content:flex-end;
 }
 .button {
-    margin-left:10.7rem;
     display:inline;
 }
 .nav-div {
-    display:inline-flex;
-    flex-direction:row;
-    margin-left:auto;
-    margin-right:auto;
+    display:flex;
 }
 .mobile-nav-div {
     display:none;
@@ -71,6 +66,7 @@ a:hover {
     display:inline;
     margin-left:auto;
     margin-right:auto;
+    padding-left:0;
 }
 #main-title {
     font-family:'Parata', serif;
@@ -94,6 +90,7 @@ a:hover {
     margin-left:0;
     padding-bottom:3.6rem;
     padding-left:0rem;
+    flex-wrap:wrap-reverse;
 }
 section {
     background-color:#30343c;
@@ -110,8 +107,9 @@ section {
     padding-top:1rem;
     padding-bottom:1rem;
 }
-.socials {
-    display:inline;
+.footer-container {
+    display:flex;
+    justify-content:space-between;
 }
 .working-for-me {
     padding-top:3rem;
@@ -126,7 +124,17 @@ section {
     list-style:none;
     text-align:center;
 }
-@media screen and (min-width:0px) and (max-width:1199px) {
+#name {
+    font-family: 'Prata', serif;
+    color:white;
+    font-size:1.05em;
+    padding-left:0;
+    margin-bottom:0;
+}
+picture {
+    overflow:hidden;
+}
+@media screen and (max-width:991px) {
     .button {
         display:none;
     }
@@ -134,15 +142,10 @@ section {
         display:none;
     }
     #hamburger-menu {
-        display:inline;
+        display:flex;
     }
     .logos-li {
         margin-right:4.7rem;
     }
-    #hamburger-menu:focus .mobile-nav-div{
-        display:block;
-        background-color:black;
-        width:100%;
-        height:100%;
-    }
 }
+
